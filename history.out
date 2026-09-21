@@ -1,0 +1,42 @@
+    1  ls -la
+    2  groupadd students
+    3  cat /etc/group
+    4  useradd -u 1234 -g students user1
+    5  id user1
+    6  cat /etc/passwd
+    7  cat /etc/shadow
+    8  passwd user1
+    9  cat /etc/shadow
+   10  chage -M 90 user1
+   11  chage -l user1
+   12  cat /etc/shadow
+   13  ls /home
+   14  ls /home/user1
+   15  stat /home/user1
+   16  find / -type f -perm -4000 2>/dev/null
+   17  ps -eo pid,ruid,euid,user,euser
+   18  touch /home/user1/test.txt
+   19  ls -l /home/user1
+   20  chmod 600 /home/user1/test.txt
+   21  ls -l /home/user1
+   22  mkdir /home/user1/bin
+   23  ls /usr/bin
+   24  cp /usr/bin/cat /home/user1/bin/cat
+   25  ls -la /home/user1/bin
+   26  chmod 4755 /home/user1/bin/cat
+   27  ls -la /home/user1/bin
+   28  nano /home/user1/text.txt
+   29  nano /home/user1/test.txt
+   30  touch /home/user1/testfile
+   31  chmod 644 /home/user1/testfile
+   32  ls -l /home/user1
+   33  cp /usr/bin/chown /home/user1/bin/chown
+   34  chmod 755 /home/user1/bin/chown
+   35  ls -la /home/user1/bin
+   36  setcap cap_chown=ep /home/user1/bin/chown
+   37  getcap /home/user1/bin/chown
+   38  setcap cap_chown-ep /home/user1/bin/chown
+   39  chown root:root /home/user1/testfile
+   40  setcap cap_chown=ep /home/user1/bin/chown
+   41  nano /etc/sudoers
+   42  history > ~/history.out
